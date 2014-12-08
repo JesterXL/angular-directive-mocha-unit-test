@@ -11,7 +11,9 @@
         vm.datNameThough = nameModel;
         vm.onDatNameChangeHotAction = function()
         {
-            
+            console.log("before:", nameModel.name);
+            nameModel.changeToRandomName();
+            console.log("after:", nameModel.name);
         };
         
     }

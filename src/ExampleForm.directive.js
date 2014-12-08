@@ -7,6 +7,7 @@
 
     function jxlExampleForm()
     {
+        console.log("jxlExampleForm");
         return {
             restrict: 'E',
             scope: {},

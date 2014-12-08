@@ -7,9 +7,30 @@
 
     function nameModel()
     {
-        var nameModel = {
-            name: "Jesse Warden"
+
+        var nameList = [
+                        "Jesse Warden", 
+                        "Chad Mott", 
+                        "Bruce Campbell", 
+                        "Susan Sarandon", 
+                        "Julianne Moore"
+                        ];
+
+        var getRandomName = function()
+        {
+            var len = nameList.length;
+            var num = Math.round(Math.random() * len);
+            return nameList[num];
         };
+
+        var nameModel = {
+            name: "Jesse Warden",
+            changeToRandomName: function()
+            {
+                this.name = getRandomName();
+            }
+        };
+
         return nameModel;
     }
 
