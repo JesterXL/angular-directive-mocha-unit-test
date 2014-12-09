@@ -49,7 +49,18 @@ module.exports = function(config) {
             'karma-phantomjs-launcher',
             'karma-chrome-launcher',
             'karma-junit-reporter',
-            'karma-sinon'
-        ]
+            'karma-sinon',
+            'karma-ng-html2js-preprocessor'
+        ],
+        preprocessors: {
+            '**/*.html': 'ng-html2js'
+        },
+        ngHtml2JsPreprocessor: {
+            moduleName: 'app',
+            /* templateUrl format = '../{component}/{template}' (solves problem with nested directives) */
+            cacheIdFromPath: function(filepath) {
+                return filepath.replace('src/', '');
+            }
+        }
     });
 };
