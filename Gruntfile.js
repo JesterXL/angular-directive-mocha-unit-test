@@ -70,7 +70,8 @@ module.exports = function (grunt) {
                         'src/*.module.js',
                         'src/*.js',
                         'src/**/*.module.js',
-                        'src/**/*.js']
+                        'src/**/*.js',
+                        '!src/**/*.spec.js']
                 }
                 
             }
